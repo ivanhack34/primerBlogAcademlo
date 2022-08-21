@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+/*Esta es la importacion del google fonts*/
+
+:root{
+    --background: linear-gradient(135deg, #667eea7e 0%, #744ba298 100%); /*Ayuda que tenga la transparencia con el color morado*/
+    --color-primary: #667eea;
+    --color-secundary: #764ba2;
+    --boton-padding: 20px 40px; /*Esto hara que en el padding tenga 20px arriba y abajo y a los lados 40px*/
+}
+
+body {
+    font-family: 'Raleway', sans-serif; /*En el body heredaran este tipo de texto. Para el blog*/
+}
+
+.container {
+    width: 90%; /*Tendra a los lados un 90% el contenedor*/
+    margin: 0 auto; /*Hace que el margen este en 0 en vertical y hotizontal*/
+    overflow: hidden; /*Hace que lo que tenga esta propiedad se esconda*/
+    padding: 80px 0; /*El padding tendra de arriba y abajo 80px y a los lados 0px*/
+    max-width: 1200px; 
+}
+
+.subtitle {
+    color: var(--color-primary); 
+    font-size: 2.5rem; /*Las letras tendra un tamaño de 2.5rem*/
+    margin-bottom: 35px; /*El margen que esta debajo sea de 35px*/
+}
+
+.hero {
+    height: 100vh; /*Ocupara el 100% del alto de este valor*/
+    background-image: var(--background), url("../Imaganes/andy-holmes-webyw4NsFPg-unsplash.jpg"); /*Se encarga el color del fondo y la imagen de este*/
+    background-repeat: no-repeat;
+    background-size: cover; /*Para que pueda abarcar el 100% del fondo*/
+    background-attachment: fixed;  /*Esto es para el efecto palax*/
+    background-position: center; /*Se pueda centrar el fondo*/
+    position: relative; /*Para que se posiciones la wave*/
+}
+
+.hero .container { /*Esto es para los elementos container dentro de hero */
+    padding: 0;
+}
+
+.nav { /*Esto es para la bara del navegador*/
+    display: flex;
+    justify-content: flex-end; /*Esto hara que todos los elementos esten al final del contenedor*/
+    height: 70px;
+    align-items: center;
+    font-weight: 700; /*Estos 3 ultimos son para que los elemntos lo hereden*/
+}
+
+section[id]{
+    scroll-margin-top: 70px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav--footer{ /*Esto es para el navegador del footer*/
+    font-weight: 300;
+    justify-content: flex-start; /*Esto hara que los elemtos esten al principio del footer*/
+}
+
+.nav__items{ /*Este es para lo items del navegador*/
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit; /*El inherit hereda el peso de la fuente*/
+}
+
+.nav__items--cta{ /*Esta es para el boton contactame de la parte del header*/
+    border: 1px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px;
+}
+
+.hero__container{ /*Este es el contenedor principal de la presentacion*/
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: #fff;
+}
+
+.hero__texts {
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.hero__title {
+    font-size: 3.2rem;
+}
+
+.hero_subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.hero__wave { /*Esto se encarga de div que tiene el dibujo de una ola*/
+    position: absolute; /*Esto hara que se posicione absolutamente en su padre*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.hero__cta{
+    display: inline-block; /*Desbloque las propiedades del box model*/
+    background: #fff;
+    padding: var(--boton-padding);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 40px; 
+}
+
+/* Vamos con la presentacion */
+
+.presentation {
+    padding: 0;
+    text-align: center;
+}
+
+.presentation__picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*Para que mi imagen tenga la forma redonda*/
+    margin-bottom: 10px;
+    object-fit: cover; /*Esto hace que la imagen no pierda la resolucion*/
+    object-position: top; /*Hace que la imagen suba la posicion*/
+}
+
+.presentation__copy {
+    width: 80%;
+    margin: 0 auto; /*Esto lo hace para centrar el texto*/
+}
+
+.presentation__cta{
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    padding: var(--boton-padding);
+    border-radius: 40px;
+}
+
+.about {
+    min-height: 400px;
+    display: grid; /*Este establece los elementos y contenidos en un modelo cuadriculado*/
+    grid-template-columns: 1fr 1fr; /*Esta entre cuadrido a cuadrito*/
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+.about__img{
+    text-align: center;
+}
+
+.about__img--left {
+    text-align: left;
+}
+
+.about__picture{
+    max-width: 80%; /*Hace este en el 80% de su contenedor*/
+}
+
+.about__paragraph{
+    margin-bottom: 20px;
+    line-height: 1.5; /*Estable la linea del texto, es decir, la distancia de una linea*/
+    font-weight: 300;
+}
+
+/*Mis Hobbies*/
+
+.hobbies {
+    background: #f2f2f2;
+}
+
+.hobbies__grid {
+    display: grid;
+    height: 550px;
+    grid-template-areas:
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.hobbies__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hobbies__ing {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Se ajusta el elemento*/
+    cursor: pointer; /*Para al tocar la imagen aparesca el cursor*/
+}
+
+.hobbies__item:nth-of-type(1){ /*Usaremos la seudoclase oftype*/
+    grid-area: img1;
+} 
+.hobbies__item:nth-of-type(2){ /*Usaremos la seudoclase oftype*/
+    grid-area: img2;
+} 
+
+.hobbies__item:nth-of-type(3){ /*Usaremos la seudoclase oftype*/
+    grid-area: img3;
+} 
+
+.hobbies__item:nth-of-type(4){ /*Usaremos la seudoclase oftype*/
+    grid-area: img4;
+} 
+
+.hobbies__item:nth-of-type(5){ /*Usaremos la seudoclase oftype*/
+    grid-area: img5;
+} 
+
+.hobbies__hover { /*Para que tenga el sombreado para parte de la animacion*/
+    position: absolute;
+    background: var(--background);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.hobbies__item:hover .hobbies__hover { /*Afectare de item a hover*/
+    transform: translateX(0%);
+}
+
+.hobbies_icon { /*En caso de que ponga un icono en cada uno*/
+    margin-top: 10px;
+    font-size: 30px
+}
+
+/*Vamos para el footer*/
+
+.footer {
+    background-color: var(--color-primary)
+}
+
+.nav__items--footer {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer__title {
+    font-weight: 400;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__container-icons{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.footer__icon {
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    line-height: 60px;
+}
+
+.fab.footer__icon {
+    line-height: 60px;
+}
+
+/*Para los diferentes medidas para las demas plataformas*/
+
+@media screen and (max-width: 800px) {
+    :root{
+        --botton-paging: 18px 40px;
+    }
+
+    .nav{
+        justify-content: space-around;
+    }
+
+    .nav__items--cta{
+        border: none;
+    }
+
+    .nav__items{
+        font-weight: 400;
+        border-bottom: 1px solid #fff;
+        margin-right: 0;
+    }
+
+    .nav__items--footer{
+        border: none;
+    }
+
+    .hero__texts{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .hero__title{
+        font-size: 2.5rem;
+    }
+
+    .hero__title{
+        font-size: 1.5rem;
+    }
+
+    /*About*/
+
+    .presentation__copy{
+        width: 100%;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .about.container{
+        padding-top: 30px;
+    }
+
+    .about__img--left{
+        text-align: center;
+    }
+    
+    .about__text:last-child {
+        grid-row: 3/4;
+    }
+
+    /*Hobbies*/
+
+    .hobbies__grid{
+        grid-template-areas:
+        "img1 img1 img2 img2"
+        "img1 img1 img3 img3"
+        "img4 img4 img5 img5";
+    }
+
+    /*Footer*/
+
+    .footer__grid{
+        grid-template-columns: 1fr;
+    }
+
+    .footer_contact{
+        grid-row: 1/2;
+    }
+}
+
+@media screen  and (max-width: 500px) {
+    :root{
+        --boton-padding: 18px 35px;
+    }
+
+    .subtitle{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    .nav__items{
+        padding: 0 10px;
+        border: 0;
+    }
+
+    .hero__texts{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    /*About*/
+
+    .presentation__picture{
+        width: 120px;
+        height: 120px;
+    }
+
+    .about{
+        row-gap: 60px;
+    }
+
+    .about.container{
+        padding-top: 10px;
+    }
+
+    /*Hobbies*/
+
+    .hobbies__grid{
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5";
+        height: auto;
+        grid-template-rows: repeat(5, 250px);
+        grid-auto-flow: 250px;
+        gap: 10px;
+    }
+
+}
+

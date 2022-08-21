@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Mi primer blog</title>
+</head>
+<body>
+
+<!-- LO QUE DEBE TENER EL BLOG 
+una foto
+que diga quienes son
+porque estan estudiando programacion
+cuales son sus hobbies
+formulario -->
+
+    <header class="hero"> <!-- Tendra el header la clase hero -->
+    <div class="container"> <!-- Tendra el div una clase container, es decir, tendra el contenido de la pagina-->
+        <nav class="nav"> <!-- Esta tendra la barra de nav para cada parte del formulario -->
+            <a href="#presentation" class="nav__items nav__items--cta">Contactame</a>
+            <a href="#about" class="nav__items nav__items--ep">Por que programacion</a>
+            <a href="#hobbies" class="nav__items nav__items--hbo">Hobbies</a>
+        </nav>
+
+        <section class="hero__container" id="hero_container"> <!--En este contenedor sera el principal de esta seccion-->
+            <div class="hero__texts"> <!--Este div tendra el contenedor para tener todos los textos-->
+                <h1 class="hero__title"> <!--En este h1 es para el titulo con mi nombre y apellido-->
+                    BIENVENIDOS A MI BLOG
+                </h1>
+                <h2 class="hero_subtitle"> <!--Este tiene el subtitulo para la presentacion-->
+                    Este es el comienzo de mi camino a programador FULL-STACK WEB REACT
+                </h2>
+                <a href="#" class="hero__cta">Contactame (MANTENIMIENTO)</a> <!--Este enlace es para que me contacten-->
+            </div>
+        </section>
+    </div>
+    <!--Este div lo que hace es el efecto del wave, sacado de este link: https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+    <div class="hero__wave" style= "overflow: hidden;" ><svg viewBox="0 0 500 150" 
+        preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.99 C150.00,149.97 349.21,-49.98 500.01,49.99 L500.01,149.97 L0.00,149.97 Z" 
+        style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>
+
+    <main>
+        <section class="presentation container" id="presentation"> <!--Esta seccion es de mi presentacion-->
+            <img src="Imaganes/Yo.jpeg" alt="" class="presentation__picture"> <!--Esta es mi imagen-->
+            <h2 class="subtitle">Mi nombre es: Ivan Polanco</h2> <!--El subtitulo de la presentacacion-->
+            <p class="presentation__copy"> <!--Este es el parrafo de mi introduccion-->
+                Soy un ingeniero en software que tiene los conocimiento
+                tanto front-end y back-end web junior, entre otros conocimientos
+                mas. Para poder llegar en un futuro a desarrollador Full-Stack web React.
+            </p>
+            <a href="" class="presentation__cta">Contactame:</a> <!--Este es para que me contacten-->
+        </section>
+
+        <section class="about container" id="about"> <!--Esta es la seccion donde se contrendra la info del por que estudio-->
+            <div class="about__text"> <!--El div que contrendra todo el texto-->
+                <h2 class="subtitle">Porque estudio programacion:</h2>
+                <p class="about__paragraph">
+                    Yo estudio programacion ademas de que me llama la atecion. 
+                    Me gusta mejorar y estar tambien a la par o lo posible. Con la tecnologia del momento. 
+                </p>
+                <p class="about__paragraph">
+                    Por supuesto aparte del buen salario, que es importante :).
+                    Tambien me gusta el auto aprendisaje que me da y que se que puedo mejorar en mi dia a dia en esta area cambiante.
+                </p>
+            </div>
+
+            <!--Con esta parte se usara las imagnes para los 2 parrafos-->
+            <figure class="about__img">
+                <img src="Imaganes/lenguajes.png" alt="" class="about__picture">
+            </figure>
+            <figure class="about__img about__img--left">
+                <img src="Imaganes/undraw_dev_productivity_re_fylf.svg" alt="" class="about__picture">
+            </figure>
+
+            <div class="about__text"> <!--El div que contrendra todo el texto-->
+                <h2 class="subtitle">Mas objetivos en mente:</h2>
+                <p class="about__paragraph">
+                    Unos de mis objetivos en el caso de academlo.
+                    Es poder sacar y despertar mi parte mas logica y con mas conocimiento de programador a la luz.
+                    Ademas de poder evolucionar y no volver a quedarme estancado con la misma tecnologia o logica de siempre.
+                    Mas bien ir a por mas y mas.
+                </p>
+                <p class="about__paragraph">
+                    Aparte de que quiero realizar diferentes proyecto que tenia en mente.
+                    Tanto a largo y corto plazo. De los cuales la mayoria tiene que ver con esta area.
+                    Ademas de poder ayudar a otro y que ellos me puede ayudar tanto aprendiendo y mejorando.
+                </p>
+            </div>
+        </section>
+
+        <section class="hobbies" id="hobbies"> <!--Este seria los proyectos personales o hobbies que hago en mi tiempo libre-->
+            <div class="container">
+                <h2 class="subtitle">Mis hobbies</h2>
+                <div class="hobbies__grid"><!--Esto almacenara los hobbies-->
+
+                    <article class="hobbies__item"> <!--Aqui se almacenan los items de cada hobbie-->
+                        <img src="Imaganes/img1.jpg" alt="" class="hobbies__ing">
+                        <div class="hobbies__hover"> <!--Mostrara la accion de lo que hara la imagen-->
+                            <h2 class="hobbies_title">Boxeo</h2>
+                            <i class="far far-file-alt hobbies_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="hobbies__item"> <!--Aqui se almacenan los items de cada hobbie-->
+                        <img src="Imaganes/img2.JPG" alt="" class="hobbies__ing">
+                        <div class="hobbies__hover"> <!--Mostrara la accion de lo que hara la imagen-->
+                            <h2 class="hobbies_title">Leer</h2>
+                            <i class="far far-file-alt hobbies_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="hobbies__item"> <!--Aqui se almacenan los items de cada hobbie-->
+                        <img src="Imaganes/img3.jpg" alt="" class="hobbies__ing">
+                        <div class="hobbies__hover"> <!--Mostrara la accion de lo que hara la imagen-->
+                            <h2 class="hobbies_title">Cocinar</h2>
+                            <i class="far far-file-alt hobbies_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="hobbies__item"> <!--Aqui se almacenan los items de cada hobbie-->
+                        <img src="Imaganes/img4.jpg" alt="" class="hobbies__ing">
+                        <div class="hobbies__hover"> <!--Mostrara la accion de lo que hara la imagen-->
+                            <h2 class="hobbies_title">Ver Peliculas</h2>
+                            <i class="far far-file-alt hobbies_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="hobbies__item"> <!--Aqui se almacenan los items de cada hobbie-->
+                        <img src="Imaganes/img5.jpg" alt="" class="hobbies__ing">
+                        <div class="hobbies__hover"> <!--Mostrara la accion de lo que hara la imagen-->
+                            <h2 class="hobbies_title">Ver Series</h2>
+                            <i class="far far-file-alt hobbies_icon"></i>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer"> <!--Esta parte es todo lo que se hara en el pie de pagina-->
+        <div class="container footer__grid">
+            <nav class="nav  nav--footer">
+                <a class="nav__items--footer" href="#hero_container">Inicio</a>
+                <a class="nav__items--footer" href="#presentation">Sobre mi</a>
+                <a class="nav__items--footer" href="#about">Por que estudio programacion</a>
+                <a class="nav__items--footer" href="#hobbies">Hobbies</a>
+            </nav>
+
+            <section class="footer_contact">
+                <h3 class="footer__title">Contactame Por Favor</h3>
+                <div class="footer-icons"> <!--Aqui se mantendran los iconos de mis redes sociales-->
+                    <span class="footer__container-icons ">
+                        <a class="fab fa-instagram footer__icon" href="https://www.instagram.com/ivanp34/"></a> 
+                    </span>
+                    <span class="footer__container-icons">
+                        <a class="fab fa-github footer__icon" href="https://github.com/ivanhack34"></a>
+                    </span>
+                    <span class="footer__container-icons">
+                        <a class="fab fa-facebook footer__icon" href="https://www.facebook.com/ivan.polanco.944/"></a>
+                    </span>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+
+    
+
+
+    <!-- Este es el enlace de mi kit para los iconos que usare, principalmente para redes sociales -->
+    <script src="https://kit.fontawesome.com/916cd34cd0.js" crossorigin="anonymous"></script> 
+</body>
+</html>
